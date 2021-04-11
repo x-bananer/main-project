@@ -133,6 +133,7 @@ button {
 
 .menu__link:hover {
     color: #FF3D00;
+    transition: .3s;
 }
 
 .contacts__phone {
@@ -141,10 +142,9 @@ button {
     margin-bottom: 0;
 }
 
-.contacts__dropdown-title {
+.dropdown__link {
     font-size: 13px;
-    text-decoration: underline;
-    color: #FF3D00;
+    text-decoration: none;
 }
 
 .hero {
@@ -197,6 +197,7 @@ button {
 
 .button--red:hover {
     background: #DA0100;
+    transition: .3s;
 }
 
 .button--orange {
@@ -205,6 +206,7 @@ button {
 
 .button--orange:hover {
     background: #FF3D00;
+    transition: .3s;
 }
 
 .button--orange--light {
@@ -214,6 +216,7 @@ button {
 
 .button--orange--light:hover {
     background: #FF3D00;
+    transition: .3s;
 }
 
 
@@ -231,6 +234,7 @@ button {
 .button--light:hover {
     background: #FF5500;
     color: #fff;
+    transition: .3s;
 }
 
 .offer--button {
@@ -243,7 +247,7 @@ button {
 
 .button--grey:hover {
     background: #2B2B2B;
-    ;
+    transition: .3s;
 }
 
 .section {
@@ -290,6 +294,7 @@ button {
     border: 5px solid #CCC;
     box-sizing: border-box;
     border-radius: 5px;
+    transition: .3s;
 }
 
 .offer__header {
@@ -425,6 +430,8 @@ button {
 
 .paginator__item {
     text-align: center;
+    border-radius: 50%;
+
 }
 
 .paginator__info {
@@ -443,8 +450,8 @@ button {
 .paginator__item:hover {
     width: 32px;
     height: 32px;
-    border-radius: 50%;
     background: #FF5500;
+    transition: .5s;
 }
 
 .paginator__item--active .paginator__link {
@@ -572,38 +579,147 @@ button {
     width: 36px;
     height: 36px;
     background: center center no-repeat;
+    position: relative;
 }
 
-.socials__item--icon--tg .socials__link {
-    background-image: url("./img/telegram.png");
+.socials__item--icon--tg .socials__link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: url("./img/sprite.png") -346px -10px;
+    transition: .3s;
 }
 
-.socials__item--icon--tg .socials__link:hover {
-    background-image: url("./img/ht.png");
+.socials__item--icon--tg .socials__link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: url("./img/sprite.png") -178px -10px;
+    opacity: 0;
+    transition: .3s;
 }
 
-.socials__item--icon--vk .socials__link {
-    background-image: url("./img/vk.png");
+.socials__item--icon--tg .socials__link:hover:before {
+    opacity: 1;
 }
 
-.socials__item--icon--vk .socials__link:hover {
-    background-image: url("./img/hvk.png");
+.socials__item--icon--tg .socials__link:hover:after {
+    opacity: 0;
 }
 
-.socials__item--icon--fb .socials__link {
-    background-image: url("./img/f.png");
+.socials__item--icon--vk .socials__link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: url("./img/sprite.png") -402px -10px;
+    transition: .3s;
 }
 
-.socials__item--icon--fb .socials__link:hover {
-    background-image: url("./img/hf.png");
+.socials__item--icon--vk .socials__link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: url("./img/sprite.png") -234px -10px;
+    opacity: 0;
+    transition: .3s;
 }
 
-.socials__item--icon--ig .socials__link {
-    background-image: url("./img/in.png");
+.socials__item--icon--vk .socials__link:hover:before {
+    opacity: 1;
 }
 
-.socials__item--icon--ig .socials__link:hover {
-    background-image: url("./img/hin.png");
+.socials__item--icon--vk .socials__link:hover:after {
+    opacity: 0;
+}
+
+.socials__item--icon--fb .socials__link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: url("./img/sprite.png") -10px -10px;
+    transition: .3s;
+}
+
+.socials__item--icon--fb .socials__link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: url("./img/sprite.png") -66px -10px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.socials__item--icon--fb .socials__link:hover:before {
+    opacity: 1;
+}
+
+.socials__item--icon--fb .socials__link:hover:after {
+    opacity: 0;
+}
+
+.socials__item--icon--ig .socials__link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: url("./img/sprite.png") -290px -10px;
+    transition: .3s;
+}
+
+.socials__item--icon--ig .socials__link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    background: url("./img/sprite.png") -122px -10px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.socials__item--icon--ig .socials__link:hover:before {
+    opacity: 1;
+}
+
+.socials__item--icon--ig .socials__link:hover:after {
+    opacity: 0;
 }
 
 /*services page*/
@@ -691,16 +807,22 @@ button {
 
 .service:hover {
     background: #E5E5E5;
+    transition: .3s;
 }
 
 .service:hover .service__button {
     background: #FF5500;
     color: #fff;
+    transition: .3s;
 }
 
 .service__img {
     width: 30%;
     margin-right: 15%;
+}
+
+.service__img-elem {
+    max-width: 135%
 }
 
 .service__content {
@@ -741,6 +863,7 @@ button {
 .paginator--theme--dark .paginator__link:hover {
     color: #FFF;
     background: #FF5300;
+    transition: .3s;
 }
 
 .inner-section {
@@ -792,6 +915,7 @@ button {
 
 .partners__link:hover {
     filter: grayscale(0);
+    transition: .3s;
 }
 
 .inner-footer__container {
@@ -850,6 +974,7 @@ button {
 .review__user:hover {
     color: #2E77A4;
     text-decoration: underline;
+    transition: .3s;
 }
 
 .review__user:after {
@@ -1043,4 +1168,72 @@ button {
 
 .central__logo {
     margin-bottom: 40px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown__link {
+    color: #FF3D00;
+    text-decoration: underline;
+    transition: .3s;
+}
+
+.dropdown:hover .dropdown__menu {
+    right: 0px;
+    opacity: 0.8;
+}
+
+.dropdown__menu {
+    position: absolute;
+    top: 100%;
+    width: 156px;
+    height: 67px;
+    background: #FFF;
+    border-radius: 4px;
+    padding: 11px 25px 15px 9px;
+    margin-top: 7px;
+    right: 9999px;
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+.dropdown__menu:after {
+    content: "";
+    display: block;
+    border: 10px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-bottom-color: #FFF;
+    border-top-width: 0;
+    position: absolute;
+    top: -14%;
+    left: 60%;
+}
+
+.dropdown__menu:before {
+    content: "";
+    display: block;
+    height: 30px;
+    left: 0;
+    right: 0;
+    top: -29px;
+    position: absolute;
+}
+
+.dropdown__item {
+    line-height: 21px;
+    font-size: 13px;
+    color: #1E1F20;
+}
+
+.dropdown__item:last-child {
+    text-align: left;
+}
+
+.dropdown__marker {
+    font-weight: bold;
 }
